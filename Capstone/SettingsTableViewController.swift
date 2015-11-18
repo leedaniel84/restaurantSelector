@@ -37,15 +37,12 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell : UITableViewCell
         
-        // Configure the cell...
         if indexPath.row == 0 {
             cell = tableView.dequeueReusableCellWithIdentifier("radiusCell", forIndexPath: indexPath)
-        } else if indexPath.row == 1 {
+        } else { indexPath.row == 1
             cell = tableView.dequeueReusableCellWithIdentifier("systemCell", forIndexPath: indexPath)
-        } else {
-            return
         }
-            return cell
+        return cell
     }
 
 
@@ -97,3 +94,4 @@ class SettingsTableViewController: UITableViewController {
     */
 
 }
+

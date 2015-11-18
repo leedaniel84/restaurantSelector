@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8374795B1BFBE5A200EA4D70 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374795A1BFBE5A200EA4D70 /* SettingsViewController.swift */; };
 		83D626FC1BFA96DD0015C00A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D626FB1BFA96DD0015C00A /* AppDelegate.swift */; };
 		83D626FE1BFA96DD0015C00A /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */; };
 		83D627011BFA96DD0015C00A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D626FF1BFA96DD0015C00A /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8374795A1BFBE5A200EA4D70 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		83D626F81BFA96DC0015C00A /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D626FB1BFA96DD0015C00A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */,
 				83D626FF1BFA96DD0015C00A /* Main.storyboard */,
 				83D627111BFBC90B0015C00A /* SettingsTableViewController.swift */,
+				8374795A1BFBE5A200EA4D70 /* SettingsViewController.swift */,
 				83D627021BFA96DD0015C00A /* Assets.xcassets */,
 				83D627041BFA96DD0015C00A /* LaunchScreen.storyboard */,
 				83D627071BFA96DD0015C00A /* Info.plist */,
@@ -149,6 +152,7 @@
 				83D626FE1BFA96DD0015C00A /* RestaurantViewController.swift in Sources */,
 				83D6270E1BFAD5B60015C00A /* RestaurantDetailViewController.swift in Sources */,
 				83D626FC1BFA96DD0015C00A /* AppDelegate.swift in Sources */,
+				8374795B1BFBE5A200EA4D70 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +302,7 @@
 				83D6270C1BFA96DD0015C00A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
