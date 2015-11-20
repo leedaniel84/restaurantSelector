@@ -734,7 +734,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aZ-j1-oo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1262" y="387"/>
+            <point key="canvasLocation" x="1108" y="387"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="6wC-z3-HQW">
+            <objects>
+                <tableViewController id="wLF-gz-LnO" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Upp-Wa-gAj">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3HT-Pb-0NA">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3HT-Pb-0NA" id="Sd9-EV-YKW">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wLF-gz-LnO" id="Ccg-hi-Txw"/>
+                            <outlet property="delegate" destination="wLF-gz-LnO" id="c07-Tn-BqI"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFk-UB-Eet" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lex-rC-fon">

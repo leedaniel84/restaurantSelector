@@ -1,5 +1,5 @@
 //
-//  NetworkController.swift
+//  RestaurantController.swift
 //  Capstone
 //
 //  Created by Daniel Lee on 11/19/15.
@@ -7,7 +7,3 @@
 //
 
 import Foundation
-
-class NetworkController {
-    static func baseURL(searchTerm: String)
-}
