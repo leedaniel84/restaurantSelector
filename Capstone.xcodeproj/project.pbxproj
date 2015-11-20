@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8374795B1BFBE5A200EA4D70 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374795A1BFBE5A200EA4D70 /* SettingsViewController.swift */; };
 		83D626FC1BFA96DD0015C00A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D626FB1BFA96DD0015C00A /* AppDelegate.swift */; };
 		83D626FE1BFA96DD0015C00A /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */; };
 		83D627011BFA96DD0015C00A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D626FF1BFA96DD0015C00A /* Main.storyboard */; };
@@ -16,10 +15,10 @@
 		83D6270E1BFAD5B60015C00A /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */; };
 		83D627101BFAD5D40015C00A /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6270F1BFAD5D40015C00A /* Restaurants.swift */; };
 		83D627121BFBC90B0015C00A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D627111BFBC90B0015C00A /* SettingsTableViewController.swift */; };
+		83FA53AE1BFEBC33002626C0 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA53AD1BFEBC33002626C0 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8374795A1BFBE5A200EA4D70 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		83D626F81BFA96DC0015C00A /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D626FB1BFA96DD0015C00A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		83D6270F1BFAD5D40015C00A /* Restaurants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
 		83D627111BFBC90B0015C00A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		83FA53AD1BFEBC33002626C0 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +64,11 @@
 			children = (
 				83D626FB1BFA96DD0015C00A /* AppDelegate.swift */,
 				83D6270F1BFAD5D40015C00A /* Restaurants.swift */,
+				83FA53AD1BFEBC33002626C0 /* NetworkController.swift */,
 				83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */,
 				83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */,
 				83D626FF1BFA96DD0015C00A /* Main.storyboard */,
 				83D627111BFBC90B0015C00A /* SettingsTableViewController.swift */,
-				8374795A1BFBE5A200EA4D70 /* SettingsViewController.swift */,
 				83D627021BFA96DD0015C00A /* Assets.xcassets */,
 				83D627041BFA96DD0015C00A /* LaunchScreen.storyboard */,
 				83D627071BFA96DD0015C00A /* Info.plist */,
@@ -149,10 +149,10 @@
 			files = (
 				83D627101BFAD5D40015C00A /* Restaurants.swift in Sources */,
 				83D627121BFBC90B0015C00A /* SettingsTableViewController.swift in Sources */,
+				83FA53AE1BFEBC33002626C0 /* NetworkController.swift in Sources */,
 				83D626FE1BFA96DD0015C00A /* RestaurantViewController.swift in Sources */,
 				83D6270E1BFAD5B60015C00A /* RestaurantDetailViewController.swift in Sources */,
 				83D626FC1BFA96DD0015C00A /* AppDelegate.swift in Sources */,
-				8374795B1BFBE5A200EA4D70 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
