@@ -8,24 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		8377564F1BFFEEE600E7BBB7 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377564E1BFFEEE600E7BBB7 /* LocationController.swift */; };
-		8377573E1C1102DA00E7BBB7 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377573D1C1102DA00E7BBB7 /* YelpClient.swift */; };
 		83D626FC1BFA96DD0015C00A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D626FB1BFA96DD0015C00A /* AppDelegate.swift */; };
 		83D626FE1BFA96DD0015C00A /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */; };
 		83D627011BFA96DD0015C00A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D626FF1BFA96DD0015C00A /* Main.storyboard */; };
 		83D627031BFA96DD0015C00A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D627021BFA96DD0015C00A /* Assets.xcassets */; };
 		83D627061BFA96DD0015C00A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D627041BFA96DD0015C00A /* LaunchScreen.storyboard */; };
 		83D6270E1BFAD5B60015C00A /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */; };
-		83D627101BFAD5D40015C00A /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6270F1BFAD5D40015C00A /* Restaurants.swift */; };
+		83D627101BFAD5D40015C00A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6270F1BFAD5D40015C00A /* Restaurant.swift */; };
 		83D627121BFBC90B0015C00A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D627111BFBC90B0015C00A /* SettingsTableViewController.swift */; };
-		83FA53AE1BFEBC33002626C0 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA53AD1BFEBC33002626C0 /* SearchController.swift */; };
 		83FA53B21BFEBE8C002626C0 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA53B11BFEBE8C002626C0 /* RestaurantController.swift */; };
 		83FA53B51BFECBBA002626C0 /* RestaurantDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA53B41BFECBBA002626C0 /* RestaurantDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8377564E1BFFEEE600E7BBB7 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
-		8377573D1C1102DA00E7BBB7 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
-		837757411C111E8B00E7BBB7 /* Yelp Bridging Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yelp Bridging Header.h"; sourceTree = "<group>"; };
 		83D626F81BFA96DC0015C00A /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D626FB1BFA96DD0015C00A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantViewController.swift; path = Capstone/RestaurantViewController.swift; sourceTree = "<group>"; };
@@ -34,9 +30,8 @@
 		83D627051BFA96DD0015C00A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83D627071BFA96DD0015C00A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantDetailViewController.swift; path = Capstone/RestaurantDetailViewController.swift; sourceTree = "<group>"; };
-		83D6270F1BFAD5D40015C00A /* Restaurants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurants.swift; path = Capstone/Restaurants.swift; sourceTree = "<group>"; };
+		83D6270F1BFAD5D40015C00A /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = Capstone/Restaurant.swift; sourceTree = "<group>"; };
 		83D627111BFBC90B0015C00A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = Capstone/SettingsTableViewController.swift; sourceTree = "<group>"; };
-		83FA53AD1BFEBC33002626C0 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchController.swift; path = Capstone/SearchController.swift; sourceTree = "<group>"; };
 		83FA53B11BFEBE8C002626C0 /* RestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
 		83FA53B41BFECBBA002626C0 /* RestaurantDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantDetailTableViewController.swift; path = Capstone/RestaurantDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,31 +47,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8377573F1C1102E600E7BBB7 /* API */ = {
+		837757681C1210A200E7BBB7 /* Capstone */ = {
 			isa = PBXGroup;
 			children = (
-				8377573D1C1102DA00E7BBB7 /* YelpClient.swift */,
+				83D626FA1BFA96DC0015C00A /* UI */,
+				83FA53AF1BFEBE1A002626C0 /* Model */,
+				83FA53B01BFEBE38002626C0 /* Model Controller */,
+				83FA53B31BFEC050002626C0 /* View Controllers */,
 			);
-			name = API;
-			sourceTree = "<group>";
-		};
-		837757401C111E5900E7BBB7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				837757411C111E8B00E7BBB7 /* Yelp Bridging Header.h */,
-			);
-			name = "Supporting Files";
+			name = Capstone;
 			sourceTree = "<group>";
 		};
 		83D626EF1BFA96DC0015C00A = {
 			isa = PBXGroup;
 			children = (
-				837757401C111E5900E7BBB7 /* Supporting Files */,
-				8377573F1C1102E600E7BBB7 /* API */,
-				83D626FA1BFA96DC0015C00A /* Capstone */,
-				83FA53AF1BFEBE1A002626C0 /* Model */,
-				83FA53B01BFEBE38002626C0 /* Model Controller */,
-				83FA53B31BFEC050002626C0 /* View Controllers */,
+				837757681C1210A200E7BBB7 /* Capstone */,
 				83D626F91BFA96DC0015C00A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,7 +74,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		83D626FA1BFA96DC0015C00A /* Capstone */ = {
+		83D626FA1BFA96DC0015C00A /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				83D626FB1BFA96DD0015C00A /* AppDelegate.swift */,
@@ -98,13 +83,14 @@
 				83D627041BFA96DD0015C00A /* LaunchScreen.storyboard */,
 				83D627071BFA96DD0015C00A /* Info.plist */,
 			);
+			name = UI;
 			path = Capstone;
 			sourceTree = "<group>";
 		};
 		83FA53AF1BFEBE1A002626C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				83D6270F1BFAD5D40015C00A /* Restaurants.swift */,
+				83D6270F1BFAD5D40015C00A /* Restaurant.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -112,7 +98,6 @@
 		83FA53B01BFEBE38002626C0 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				83FA53AD1BFEBC33002626C0 /* SearchController.swift */,
 				8377564E1BFFEEE600E7BBB7 /* LocationController.swift */,
 				83FA53B11BFEBE8C002626C0 /* RestaurantController.swift */,
 			);
@@ -201,11 +186,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8377573E1C1102DA00E7BBB7 /* YelpClient.swift in Sources */,
-				83D627101BFAD5D40015C00A /* Restaurants.swift in Sources */,
+				83D627101BFAD5D40015C00A /* Restaurant.swift in Sources */,
 				83FA53B21BFEBE8C002626C0 /* RestaurantController.swift in Sources */,
 				83D627121BFBC90B0015C00A /* SettingsTableViewController.swift in Sources */,
-				83FA53AE1BFEBC33002626C0 /* SearchController.swift in Sources */,
 				83D626FE1BFA96DD0015C00A /* RestaurantViewController.swift in Sources */,
 				83D6270E1BFAD5B60015C00A /* RestaurantDetailViewController.swift in Sources */,
 				83D626FC1BFA96DD0015C00A /* AppDelegate.swift in Sources */,

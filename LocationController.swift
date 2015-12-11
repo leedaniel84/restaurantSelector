@@ -6,49 +6,49 @@
 //  Copyright © 2015 Daniel Lee. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreLocation
 
 
-class Location: CLLocationManagerDelegate {
-
+class LocationController: NSObject, CLLocationManagerDelegate {
     
-//    let locationManager = CLLocationManager
-//
-//        
-//        self.locationManager.delegate = self
-//        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//        self.locationManager.requestWhenInUseAuthorization()
-//        self.locationManager.startUpdatingLocation()
-//    
-//    
-//    
-//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        
-//        let location = locations.last
-//        
-//        let center = CLLocationCoordinate2DMake(location!.coordinate.latitude, location!.coordinate.longitude)
-//        
-//        self.locationManager.stopUpdatingLocation()
-//    }
-//    
-//    
-//    
-//   
-//    
-//    
-//    
-//    
-//    var coordinates: CLLocationCoordinate2D
-//    var radius: CLLocationDistance
-//    var identifier: String
-//   
-//    
-//    init(coordinates: CLLocationCoordinate2D, radius: CLLocationDistance, identifier: String) {
-//        self.coordinates = coordinates
-//        self.radius = radius
-//        self.identifier = identifier
-//        
-//    }
-
+    static let sharedInstance = LocationController()
+    
+    private var locationManager = CLLocationManager()
+    
+    func getUserLocation() {
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+    }
+    
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let location = locations.first {
+            addressOfLocation(location, completion: { (locationInEnglish) -> Void in
+                NSNotificationCenter.defaultCenter().postNotificationName("locationUpdated", object: nil, userInfo: ["location": location, "locationInEnglish": locationInEnglish])
+            })
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error Getting Location")
+    }
+    
+    func addressOfLocation(location: CLLocation, completion:(locationInEnglish: String) -> Void) {
+        
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { (placemark, error) -> Void in
+            if let name = placemark![0].name {
+                completion(locationInEnglish: name)
+                
+            }
+            
+        }
+        
+    }
+    
 }

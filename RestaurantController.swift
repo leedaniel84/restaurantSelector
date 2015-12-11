@@ -7,44 +7,38 @@
 //
 
 import Foundation
+import MapKit
 
 class RestaurantController {
-    
-    var restaurantArray: [Restaurants] = []
-    
-    func searchForRestaurant(searchTerm: String, completion: (success: Bool) -> Void) {
+
+    static func getRestaurants(location: CLLocation, completion: (restaurants: [Restaurant]) -> Void) {
         
-        let url = NetworkController.baseURL(searchTerm)
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = "Restaurants"
+        request.region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1600, 1600)
         
-        NetworkController.dataAtURL(url) { (resultData) -> Void in
-            
-            guard let data = resultData else {
-                print("No Data Returned")
-                completion(success: false)
+        let search = MKLocalSearch(request: request)
+        search.startWithCompletionHandler { (response, error) -> Void in
+            guard let response = response else {
+                print("Search Error \(error?.localizedDescription)")
                 return
             }
             
-            do {
-                let resultsAnyObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
-                
-                if let resultsDictionary = resultsAnyObject as? [String: AnyObject] {
-                    
-                    if let resultsArray = resultsDictionary["results"] as? [[String: AnyObject]] {
-                        
-                        for restaurantDictionary in resultsArray {
-                            let restaurant = Restaurants(json: restaurantDictionary)
-                            self.restaurantArray.append(restaurant)
-                        }
-                        
-                        completion(success: true)
-                    } else {
-                        completion(success: false)
-                    }
+            var arrayOfRestaurants = [Restaurant]()
+            for item in response.mapItems {
+                guard let name = item.name,
+                    let phone = item.phoneNumber,
+                    let url = item.url else {
+                    continue
                 }
-            } catch {
-                completion(success: false)
+                
+                let newRestaurant = Restaurant(name: name, placemark: item.placemark, phone: item.phoneNumber!, url: item.url!)
+                arrayOfRestaurants.append(newRestaurant)
             }
+            
+            completion(restaurants: arrayOfRestaurants)
         }
-        
+    
     }
+    
 }
