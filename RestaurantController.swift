@@ -10,8 +10,11 @@ import Foundation
 import MapKit
 
 class RestaurantController {
+    
+    
 
     static func getRestaurants(location: CLLocation, completion: (restaurants: [Restaurant]) -> Void) {
+        
         
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = "Restaurants"
@@ -26,6 +29,7 @@ class RestaurantController {
             
             var arrayOfRestaurants = [Restaurant]()
             for item in response.mapItems {
+                print(item)
                 guard let name = item.name,
                     let phone = item.phoneNumber,
                     let url = item.url else {
@@ -40,5 +44,5 @@ class RestaurantController {
         }
     
     }
-    
+ 
 }

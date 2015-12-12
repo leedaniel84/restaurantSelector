@@ -26,10 +26,10 @@ class LocationController: NSObject, CLLocationManagerDelegate {
     
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
+
         if let location = locations.first {
             addressOfLocation(location, completion: { (locationInEnglish) -> Void in
-                NSNotificationCenter.defaultCenter().postNotificationName("locationUpdated", object: nil, userInfo: ["location": location, "locationInEnglish": locationInEnglish])
+                NSNotificationCenter.defaultCenter().postNotificationName("locationUpdated", object: self, userInfo: ["location": location, "locationInEnglish": locationInEnglish])
             })
         }
     }
@@ -37,9 +37,9 @@ class LocationController: NSObject, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Error Getting Location")
     }
-    
-    func addressOfLocation(location: CLLocation, completion:(locationInEnglish: String) -> Void) {
         
+    func addressOfLocation(location: CLLocation, completion:(locationInEnglish: String) -> Void) {
+            
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { (placemark, error) -> Void in
             if let name = placemark![0].name {
