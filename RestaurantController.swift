@@ -11,7 +11,7 @@ import MapKit
 
 class RestaurantController {
     
-    
+    static let sharedController = RestaurantController()
 
     static func getRestaurants(location: CLLocation, completion: (restaurants: [Restaurant]) -> Void) {
         

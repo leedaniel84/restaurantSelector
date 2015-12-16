@@ -18,14 +18,19 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        restaurantPickerView.dataSource = self
+//        restaurantPickerView.delegate = self
+//        restaurantPickerView.selectRow((maxElements / 2), inComponent: 0, animated: false)
+        
         LocationController.sharedInstance.getUserLocation()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "locationUpdatedNotification:", name: "locationUpdated", object: nil)
         
         self.navigationItem.title = "Getting Location"
         
-//        self.becomeFirstResponder()
+        self.becomeFirstResponder()
     }
+    
     //MARK: - Displays User location
     func locationUpdatedNotification(notification: NSNotification) {
         if let locationInEnglish = notification.userInfo!["locationInEnglish"] as? String {
@@ -53,25 +58,34 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate, UIP
         return restaurantList.count
     }
     
+    
     //MARK: - Pickerview Delegate
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         return restaurantList[row].name
+        
     }
     
+ 
     //MARK: - Implementing Shake functionality
     
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
     
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+    override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
         
-        if(event.subtype == UIEventSubtype.MotionShake) {
-            let randomRestaurant = Int(arc4random_uniform(UInt32(response
+        if(event!.subtype == UIEventSubtype.MotionShake) {
+            
+            let randomRestaurants = Int(arc4random_uniform(UInt32(restaurantList.count)))
+            
+            //            self.restaurantPickerView.reloadAllComponents()
+            //DISPLAY RANDOM RESTAURANT
         }
-        
+
     }
+
 
 }
 

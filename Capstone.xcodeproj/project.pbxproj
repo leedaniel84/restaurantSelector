@@ -16,10 +16,13 @@
 		83D6270E1BFAD5B60015C00A /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */; };
 		83D627101BFAD5D40015C00A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6270F1BFAD5D40015C00A /* Restaurant.swift */; };
 		83FA53B21BFEBE8C002626C0 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA53B11BFEBE8C002626C0 /* RestaurantController.swift */; };
-		83FA53B51BFECBBA002626C0 /* RestaurantDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FA53B41BFECBBA002626C0 /* RestaurantDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		833C02AF1C1BDCB60061FB1C /* Glametrix.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Glametrix.otf; sourceTree = "<group>"; };
+		833C02B01C1BDCB60061FB1C /* GlametrixBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GlametrixBold.otf; sourceTree = "<group>"; };
+		833C02B11C1BDCCE0061FB1C /* Kirvy-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kirvy-Regular.otf"; sourceTree = "<group>"; };
+		833C02B21C1BDCDC0061FB1C /* Kirvy-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kirvy-Bold.otf"; sourceTree = "<group>"; };
 		8377564E1BFFEEE600E7BBB7 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		83D626F81BFA96DC0015C00A /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D626FB1BFA96DD0015C00A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +34,6 @@
 		83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantDetailViewController.swift; path = Capstone/RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		83D6270F1BFAD5D40015C00A /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = Capstone/Restaurant.swift; sourceTree = "<group>"; };
 		83FA53B11BFEBE8C002626C0 /* RestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
-		83FA53B41BFECBBA002626C0 /* RestaurantDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantDetailTableViewController.swift; path = Capstone/RestaurantDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		833C02AE1C1BDC7E0061FB1C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				833C02AF1C1BDCB60061FB1C /* Glametrix.otf */,
+				833C02B01C1BDCB60061FB1C /* GlametrixBold.otf */,
+				833C02B21C1BDCDC0061FB1C /* Kirvy-Bold.otf */,
+				833C02B11C1BDCCE0061FB1C /* Kirvy-Regular.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		837757681C1210A200E7BBB7 /* Capstone */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +74,7 @@
 			children = (
 				837757681C1210A200E7BBB7 /* Capstone */,
 				83D626F91BFA96DC0015C00A /* Products */,
+				833C02AE1C1BDC7E0061FB1C /* Fonts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +121,6 @@
 			children = (
 				83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */,
 				83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */,
-				83FA53B41BFECBBA002626C0 /* RestaurantDetailTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -190,7 +203,6 @@
 				83D6270E1BFAD5B60015C00A /* RestaurantDetailViewController.swift in Sources */,
 				83D626FC1BFA96DD0015C00A /* AppDelegate.swift in Sources */,
 				8377564F1BFFEEE600E7BBB7 /* LocationController.swift in Sources */,
-				83FA53B51BFECBBA002626C0 /* RestaurantDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
