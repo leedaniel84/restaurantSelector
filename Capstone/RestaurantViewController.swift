@@ -78,14 +78,30 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate, UIP
         
         if(event!.subtype == UIEventSubtype.MotionShake) {
             
-            let randomRestaurants = Int(arc4random_uniform(UInt32(restaurantList.count)))
+            for var randomRestaurants = restaurantList.count - 1; randomRestaurants > 0; randomRestaurants-- {
+                var randomized = Int(arc4random_uniform(UInt32(randomRestaurants - 1)))
+                swap(&restaurantList[randomRestaurants], &restaurantList[randomized])
+            }
             
-            //            self.restaurantPickerView.reloadAllComponents()
+//            restaurantList = Int(arc4random_uniform(UInt32(restaurantList.count)))
+            
+            self.restaurantPickerView.reloadAllComponents()
             //DISPLAY RANDOM RESTAURANT
         }
 
     }
 
+    @IBAction func seeDetailsButtonTapped(sender: AnyObject) {
+        
+        performSegueWithIdentifier("toShowDetail", sender: sender)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
 
 }
 

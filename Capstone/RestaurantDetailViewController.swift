@@ -27,7 +27,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath)
         
         if indexPath.row == 0{
-            cell.textLabel?.text = "Phone NUmber"
+            cell.textLabel?.text = "Phone Number"
         } else if indexPath.row == 1 {
             cell.textLabel?.text = "Address"
         } else {
