@@ -15,16 +15,15 @@ class Restaurant {
     var phone: String
     var coordinates: CLLocation?
     var url: NSURL?
-    var placemark: MKPlacemark
+//    var placemark: MKPlacemark
     
-    init(name: String, placemark: MKPlacemark, phone: String, url: NSURL) {
+    init(name: String, phone: String, url: NSURL, placemark: MKPlacemark) {
 
         
         self.name = name
         self.phone = phone
-        self.placemark = placemark
+//        self.placemark = placemark
         self.url = url
-        self.coordinates = placemark.location
     }
     
 }

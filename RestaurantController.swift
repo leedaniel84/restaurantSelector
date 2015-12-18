@@ -8,12 +8,17 @@
 
 import Foundation
 import MapKit
+import AddressBookUI
+
 
 class RestaurantController {
     
     static let sharedController = RestaurantController()
+    
+    static var arrayOfRestaurants:[Restaurant] = []
 
     static func getRestaurants(location: CLLocation, completion: (restaurants: [Restaurant]) -> Void) {
+        
         
         
         let request = MKLocalSearchRequest()
@@ -27,19 +32,23 @@ class RestaurantController {
                 return
             }
             
-            var arrayOfRestaurants = [Restaurant]()
+            arrayOfRestaurants = []
             for item in response.mapItems {
                 print(item)
+//                let placemark = item.placemark.coordinate
                 guard let name = item.name,
+//                    let addressDictionary = item.placemark.addressDictionary,
                     let phone = item.phoneNumber,
                     let url = item.url else {
                     continue
                 }
                 
-                let newRestaurant = Restaurant(name: name, placemark: item.placemark, phone: item.phoneNumber!, url: item.url!)
+//                let address = ABCreateStringWithAddressDictionary(addressDictionary, false)
+                
+                let newRestaurant = Restaurant(name: name, phone: phone, url: url, placemark: item.placemark)
                 arrayOfRestaurants.append(newRestaurant)
+                
             }
-            
             completion(restaurants: arrayOfRestaurants)
         }
     

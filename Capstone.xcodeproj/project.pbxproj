@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8377564F1BFFEEE600E7BBB7 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377564E1BFFEEE600E7BBB7 /* LocationController.swift */; };
+		83D461871C23B48300EB15F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D461851C23B48300EB15F2 /* Main.storyboard */; };
 		83D626FC1BFA96DD0015C00A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D626FB1BFA96DD0015C00A /* AppDelegate.swift */; };
 		83D626FE1BFA96DD0015C00A /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */; };
-		83D627011BFA96DD0015C00A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D626FF1BFA96DD0015C00A /* Main.storyboard */; };
 		83D627031BFA96DD0015C00A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D627021BFA96DD0015C00A /* Assets.xcassets */; };
 		83D627061BFA96DD0015C00A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D627041BFA96DD0015C00A /* LaunchScreen.storyboard */; };
 		83D6270E1BFAD5B60015C00A /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6270D1BFAD5B60015C00A /* RestaurantDetailViewController.swift */; };
@@ -24,10 +24,10 @@
 		833C02B11C1BDCCE0061FB1C /* Kirvy-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kirvy-Regular.otf"; sourceTree = "<group>"; };
 		833C02B21C1BDCDC0061FB1C /* Kirvy-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kirvy-Bold.otf"; sourceTree = "<group>"; };
 		8377564E1BFFEEE600E7BBB7 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		83D461861C23B48300EB15F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83D626F81BFA96DC0015C00A /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D626FB1BFA96DD0015C00A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D626FD1BFA96DD0015C00A /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantViewController.swift; path = Capstone/RestaurantViewController.swift; sourceTree = "<group>"; };
-		83D627001BFA96DD0015C00A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83D627021BFA96DD0015C00A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83D627051BFA96DD0015C00A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83D627071BFA96DD0015C00A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				83D626FB1BFA96DD0015C00A /* AppDelegate.swift */,
-				83D626FF1BFA96DD0015C00A /* Main.storyboard */,
 				83D627021BFA96DD0015C00A /* Assets.xcassets */,
+				83D461851C23B48300EB15F2 /* Main.storyboard */,
 				83D627041BFA96DD0015C00A /* LaunchScreen.storyboard */,
 				83D627071BFA96DD0015C00A /* Info.plist */,
 			);
@@ -186,7 +186,7 @@
 			files = (
 				83D627061BFA96DD0015C00A /* LaunchScreen.storyboard in Resources */,
 				83D627031BFA96DD0015C00A /* Assets.xcassets in Resources */,
-				83D627011BFA96DD0015C00A /* Main.storyboard in Resources */,
+				83D461871C23B48300EB15F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,10 +209,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		83D626FF1BFA96DD0015C00A /* Main.storyboard */ = {
+		83D461851C23B48300EB15F2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				83D627001BFA96DD0015C00A /* Base */,
+				83D461861C23B48300EB15F2 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

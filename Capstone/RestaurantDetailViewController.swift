@@ -12,11 +12,18 @@ import MapKit
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var restaurantMapView: MKMapView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    var selectedRestaurant = Restaurant(name: "", phone: "", url: NSURL(string: "http://www.google.com")!, placemark:  )
+    
+    func updateWithRestaurant(restaurant: Restaurant) {
+        selectedRestaurant = restaurant
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,11 +34,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath)
         
         if indexPath.row == 0{
-            cell.textLabel?.text = "Phone Number"
+            cell.textLabel?.text = selectedRestaurant.phone
         } else if indexPath.row == 1 {
-            cell.textLabel?.text = "Address"
+            cell.textLabel?.text = "\(selectedRestaurant.placemark)"
         } else {
-            cell.textLabel?.text = "URL"
+            cell.textLabel?.text = "\(selectedRestaurant.url!)"
         }
         
         return cell

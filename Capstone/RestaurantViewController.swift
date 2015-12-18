@@ -12,6 +12,7 @@ import MapKit
 class RestaurantViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var restaurantList = [Restaurant]()
+    var index = 0
     
     @IBOutlet weak var restaurantPickerView: UIPickerView!
     
@@ -67,6 +68,10 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate, UIP
         
     }
     
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.index = row
+    }
+    
  
     //MARK: - Implementing Shake functionality
     
@@ -79,28 +84,31 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate, UIP
         if(event!.subtype == UIEventSubtype.MotionShake) {
             
             for var randomRestaurants = restaurantList.count - 1; randomRestaurants > 0; randomRestaurants-- {
-                var randomized = Int(arc4random_uniform(UInt32(randomRestaurants - 1)))
+                let randomized = Int(arc4random_uniform(UInt32(randomRestaurants - 1)))
                 swap(&restaurantList[randomRestaurants], &restaurantList[randomized])
             }
             
-//            restaurantList = Int(arc4random_uniform(UInt32(restaurantList.count)))
-            
             self.restaurantPickerView.reloadAllComponents()
-            //DISPLAY RANDOM RESTAURANT
         }
 
     }
 
     @IBAction func seeDetailsButtonTapped(sender: AnyObject) {
-        
-        performSegueWithIdentifier("toShowDetail", sender: sender)
+        performSegueWithIdentifier("toShowDetail", sender: self)
     }
     
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toShowDetail" {
+            if let detailViewController = segue.destinationViewController as? RestaurantDetailViewController {
+                _ = detailViewController.view
+                
+                
+                detailViewController.updateWithRestaurant(restaurantList[index])
+                
+            }
+        }
     }
 
 }
